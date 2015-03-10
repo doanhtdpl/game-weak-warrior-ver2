@@ -1,0 +1,12 @@
+D:\ProjectGame\WeakWarror\Temp\bin\Debug\Assembly-CSharp.dll
+D:\ProjectGame\WeakWarror\Temp\bin\Debug\Assembly-CSharp.pdb
+D:\ProjectGame\WeakWarror\Temp\bin\Debug\UnityEditor.dll
+D:\ProjectGame\WeakWarror\Temp\bin\Debug\UnityEngine.dll
+D:\ProjectGame\WeakWarror\Temp\bin\Debug\UnityEngine.UI.dll
+D:\ProjectGame\WeakWarror\Temp\bin\Debug\Mono.Cecil.dll
+D:\ProjectGame\WeakWarror\Temp\bin\Debug\nunit.framework.dll
+D:\ProjectGame\WeakWarror\Temp\bin\Debug\Unity.DataContract.dll
+D:\ProjectGame\WeakWarror\Temp\bin\Debug\ICSharpCode.NRefactory.dll
+D:\ProjectGame\WeakWarror\obj\Debug\Assembly-CSharp-vs.csprojResolveAssemblyReference.cache
+D:\ProjectGame\WeakWarror\obj\Debug\Assembly-CSharp.dll
+D:\ProjectGame\WeakWarror\obj\Debug\Assembly-CSharp.pdb

@@ -1,0 +1,179 @@
+fileFormatVersion: 2
+guid: 918702a8581fa66498ef0c94dd509e51
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: cha_02(230x125)_0
+    21300002: cha_02(230x125)_1
+    21300004: cha_02(230x125)_2
+    21300006: cha_02(230x125)_3
+    21300008: cha_02(230x125)_4
+    21300010: cha_02(230x125)_5
+    21300012: cha_02(230x125)_6
+    21300014: cha_02(230x125)_7
+    21300016: cha_02(230x125)_8
+    21300018: cha_02(230x125)_9
+    21300020: cha_02(230x125)_10
+    21300022: cha_02(230x125)_11
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 1
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: .25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  seamlessCubemap: 0
+  textureFormat: -1
+  maxTextureSize: 1024
+  textureSettings:
+    filterMode: -1
+    aniso: 16
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: .5, y: .5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 100
+  alphaIsTransparency: 1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    sprites:
+    - name: cha_02(230x125)_0
+      rect:
+        serializedVersion: 2
+        x: 86
+        y: 255
+        width: 49
+        height: 100
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: cha_02(230x125)_1
+      rect:
+        serializedVersion: 2
+        x: 315
+        y: 255
+        width: 51
+        height: 100
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: cha_02(230x125)_2
+      rect:
+        serializedVersion: 2
+        x: 545
+        y: 255
+        width: 52
+        height: 99
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: cha_02(230x125)_3
+      rect:
+        serializedVersion: 2
+        x: 775
+        y: 255
+        width: 52
+        height: 98
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: cha_02(230x125)_4
+      rect:
+        serializedVersion: 2
+        x: 86
+        y: 130
+        width: 50
+        height: 98
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: cha_02(230x125)_5
+      rect:
+        serializedVersion: 2
+        x: 316
+        y: 130
+        width: 49
+        height: 99
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: cha_02(230x125)_6
+      rect:
+        serializedVersion: 2
+        x: 548
+        y: 130
+        width: 84
+        height: 112
+      alignment: 9
+      pivot: {x: .330000013, y: .439999998}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: cha_02(230x125)_7
+      rect:
+        serializedVersion: 2
+        x: 779
+        y: 130
+        width: 118
+        height: 102
+      alignment: 9
+      pivot: {x: .239999995, y: .485000014}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: cha_02(230x125)_8
+      rect:
+        serializedVersion: 2
+        x: 88
+        y: 2
+        width: 129
+        height: 77
+      alignment: 9
+      pivot: {x: .222000003, y: .675000012}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: cha_02(230x125)_9
+      rect:
+        serializedVersion: 2
+        x: 318
+        y: 2
+        width: 127
+        height: 66
+      alignment: 9
+      pivot: {x: .224999994, y: .75999999}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: cha_02(230x125)_10
+      rect:
+        serializedVersion: 2
+        x: 553
+        y: 5
+        width: 42
+        height: 74
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: cha_02(230x125)_11
+      rect:
+        serializedVersion: 2
+        x: 774
+        y: 28
+        width: 76
+        height: 37
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+  spritePackingTag: 
+  userData: 
