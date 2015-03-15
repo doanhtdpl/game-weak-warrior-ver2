@@ -4,23 +4,44 @@ using System.Collections;
 public class Enemy_Green : Enemy {
 
     public float speed;
-    public bool isLeft;
+    private bool isLeft;
     private Animator animator;
     public RuntimeAnimatorController RAnimator;
     public GameObject destroyEnemy;
+    public GameObject effect_Blood;
 
+    //private GameObject player;
+
+    public bool attack;
+    public float timeAttack;
+    private float attackRate;
+    public float timeWaitAttack;
+    private float attackWaitRate;
+    private bool isCollis = false;//kiem tra xem da va cham vs chien binh chua
     // Use this for initialization
     void Start()
     {
-        if(!isLeft)
+
+        Vector3 pos = this.transform.localPosition;
+        float posX = pos.x;
+        if (posX < 0)
+            isLeft = true;
+        else
         {
-            Vector3 scale = this.transform.localScale;
+            isLeft = false;
+            Vector3 scale = transform.localScale;
             scale.x *= -1;
-            this.transform.localScale = scale;
+            transform.localScale = scale;
         }
+
 
         animator = GetComponent<Animator>();
         animator.runtimeAnimatorController = RAnimator;
+        SetAttack(false);
+        attackRate = timeAttack;
+        attackWaitRate = timeWaitAttack;
+
+        //player = GameObject.FindGameObjectWithTag("Player");
     }
 
     // Update is called once per frame
@@ -31,7 +52,35 @@ public class Enemy_Green : Enemy {
 
     void FixedUpdate()
     {
+        if (attack)
+        {
+            attackRate -= Time.deltaTime;
+            if (attackRate < 0)
+            {
+                attack = false;
+                attackRate = timeAttack;
+                Attack();
+            }
+        }
+        else
+        {
+            if (isCollis)
+            {
+                attackWaitRate -= Time.deltaTime;
+                if (attackWaitRate < 0)
+                {
+                    attack = true;
+                    attackWaitRate = timeWaitAttack;
+                }
+            }
+        }
 
+        SetAttack(attack);
+    }
+
+    private void SetAttack(bool attack)
+    {
+        animator.SetBool(Animator.StringToHash("acttack"), attack);
     }
 
     public override void Move()
@@ -39,7 +88,6 @@ public class Enemy_Green : Enemy {
         if (isLeft)
         {
             //cong vs speed
-            //this.transform.position.x += speed;
             Vector3 position = this.transform.position;
             position.x += (speed * Time.deltaTime) ;
             transform.position = position;
@@ -47,6 +95,7 @@ public class Enemy_Green : Enemy {
         else
         {
             //c cong vs -speed
+
             Vector3 position = this.transform.position;
             position.x -= (speed * Time.deltaTime);
             transform.position = position;
@@ -55,12 +104,14 @@ public class Enemy_Green : Enemy {
 
     public override void Attack()
     {
-        animator.SetBool(Animator.StringToHash("acttack"), true);  
+        player.GetComponent<PlayerController>().IsAttack();
+
     }
 
     public override void IsAttack()
     {
         Instantiate(destroyEnemy, gameObject.transform.position, gameObject.transform.rotation);
+        Instantiate(effect_Blood, gameObject.transform.position, gameObject.transform.rotation);
     }
 
     void OnTriggerEnter2D(Collider2D other)
@@ -68,7 +119,8 @@ public class Enemy_Green : Enemy {
         if (other.tag == "Player")
         {
             speed = 0;
-            Attack();
+            attack = true;
+            isCollis = true;
         }
         if (other.tag == "PlayerAttack")
         {
