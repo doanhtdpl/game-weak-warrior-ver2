@@ -13,8 +13,12 @@ public class PlayerController : MonoBehaviour {
     public float timeAttack;
     private float attackRate;
 
+    public GameObject destroy_LegArmor;
+    public GameObject destroy_ShoulderArmor;
+    //mau
+    public int HP;
+
     public GameObject right;
-    private Collider2D[] frontHits;
 
     public RuntimeAnimatorController[] listState;
 
@@ -28,14 +32,11 @@ public class PlayerController : MonoBehaviour {
         SetAttack(false);
         attackRate = timeAttack;
         right.SetActive(false);
-        //animator.con
+        
 	}
 	
 	// Update is called once per frame
 	void FixedUpdate () {
-
-       // frontHits = Physics2D.OverlapPointAll(ri)
-
 
         if (Input.GetKeyDown(KeyCode.Space))
         {
@@ -70,8 +71,6 @@ public class PlayerController : MonoBehaviour {
             attackRate = timeAttack;
         }
         SetAttack(attack);
-
-
 	}
 
     private void SetAttack(bool attack)
@@ -80,20 +79,53 @@ public class PlayerController : MonoBehaviour {
         Attack();
     }
 
-    private void Attack()
+    public void Attack()
     {
-        //if(frontHits != null)
-        //foreach (Collider2D c in frontHits)
+        right.SetActive(attack);
+       
+    }
+
+    public  void IsAttack()
+    {
+        //Giam mau
+        HP--;
+        switch (HP)
+        {
+            case 0:
+                //chet
+                DestroyObject(gameObject);
+                break;
+            case 10:
+                //chuyen trang thai cua chien binh
+                animator.runtimeAnimatorController = listState[1];
+
+                Instantiate(destroy_LegArmor, gameObject.transform.position, gameObject.transform.rotation);
+                break;
+            case 11:
+                //chuyen trang thai cua chien binh
+                animator.runtimeAnimatorController = listState[2];
+
+                Instantiate(destroy_ShoulderArmor, gameObject.transform.position, gameObject.transform.rotation);
+                break;
+        }
+
+    }
+
+    public void AttackMiss()
+    {
+        Debug.Log("Miss roi! ");
+    }
+
+    void OnTriggerEnter2D(Collider2D other)
+    {
+        //if (other.tag == "Enemy")
         //{
-        //    if(attack)
-        //    if (c.tag == "Enemy")
+        //    if (other.GetComponent<Animator>().GetBool(Animator.StringToHash("acttack")))
         //    {
-        //        Debug.Log("va cham vs enemy");
-        //        Destroy(c.gameObject);
-        //        frontHits = null;
+        //        Debug.Log("Bi tan cong");
+        //        IsAttack();
         //    }
         //}
-        
-        right.SetActive(attack);
+
     }
 }
